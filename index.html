@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tristin - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tristin's Portfolio</h1>
+  <h2>About this portfolio</h2>
+  <div class="projects-grid">
+    <div class="summary-card">
+      <p>
+        This portfolio showcases my work in web development, including projects that demonstrate my skills in HTML, CSS, and JavaScript. Each project highlights a different aspect of my learning and creativity.
+      </p>
+    </div>
+  </div>
+
+  <h3>Projects</h3>
+  <div class="main-projects-grid">
+    <!-- Website column (tall card) -->
+    <div class="website-stack">
+      <div class="project-card tall-card">
+        <h4>Website</h4>
+        <p>Short description of website project.</p>
+      </div>
+    </div>
+
+    <!-- Business Card/Letterhead column (stacked) -->
+    <div class="vertical-stack">
+      <div class="project-card">
+        <h4>Business Card/Letterhead</h4>
+        <p>Short description.</p>
+      </div>
+      <div class="project-card">
+        <h4>Resume</h4>
+        <p>Content for extra grid 1.</p>
+      </div>
+      <div class="project-card">
+        <h4>Portfolio Piece</h4>
+        <p>Content for extra grid 2.</p>
+      </div>
+    </div>
+
+    <!-- Flyer column (stacked) -->
+    <div class="vertical-stack">
+      <div class="project-card flyer-card">
+        <a class="modal-open" href="#flyer-modal">
+          <h4>Flyer</h4>
+          <img src="imgs/EIGONOHIfly.jpg" alt="Flyer preview image" class="flyer-img">
+          <p>Short description.</p>
+        </a>
+      </div>
+      <div class="project-card">
+        <h4>Brochure</h4>
+        <p>Content for extra grid 1.</p>
+      </div>
+      <div class="project-card">
+        <h4>Poster</h4>
+        <p>Content for extra grid 2.</p>
+      </div>
+    </div>
+  </div>
+
+  <h4>Contact me!</h4>
+
+  <!-- Tabbed Modal for Flyer (CSS :target) -->
+  <div class="modal" id="flyer-modal" role="dialog" aria-modal="true" aria-labelledby="flyerModalTitle">
+    <div class="modal-content">
+      <a href="#" class="modal-close" id="modalClose" title="Close Modal" aria-label="Close modal">X</a>
+      <h3 id="flyerModalTitle">Flyer Project Details</h3>
+      <div class="modal-area">
+        <p style="margin-bottom: 1rem;">Tabbed Modal content area (fixed height for transitions).</p>
+
+        <!-- Tabs -->
+        <input id="flyertab1" type="radio" name="flyermodaltabs" checked="checked"/>
+        <label for="flyertab1">Design</label>
+
+        <ul class="tab-list">
+          <li class="modal-tab tab1">
+            <p>Design content for the flyer goes here.</p>
+            <a href="imgs/EIGONOHI_flyer.pdf" download target="_blank" class="pdf-download">
+              Download Flyer PDF
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Freeze scroll when modal is open
+    function checkModal() {
+      if (window.location.hash === "#flyer-modal") {
+        document.body.classList.add("freeze-scroll");
+      } else {
+        document.body.classList.remove("freeze-scroll");
+      }
+    }
+    window.addEventListener("hashchange", checkModal);
+    window.addEventListener("DOMContentLoaded", checkModal);
+  </script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* Sepia background and base styles */
+body {
+  background: #f4ecd8;
+  color: #111;
+  font-family: 'Lato', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Header styles */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+h2, h3, h4 {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #111;
+}
+/* Center all headers */
+h1, h2, h3, h4 {
+  text-align: center;
+}
+
+/* Optional: Add some spacing and max width for content */
+body > * {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  body > * { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* Base: Sepia background and typography */
+body {
+  background: #f4ecd8; /* soft sepia */
+  color: #111;         /* solid black text */
+  font-family: 'Lato', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Headers */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+h2, h3, h4 {
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #111;
+  text-align: center;
+}
+
+/* Optional: Content width */
+body > * {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  body > * { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Projects grid (summary) */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+
+/* Main 3-column layout for projects */
+.main-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  align-items: stretch;
+}
+.vertical-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.website-stack {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.tall-card {
+  height: 100%;
+  min-height: 0;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+/* Project cards */
+.project-card {
+  background: #fffbe9; /* slightly lighter than sepia for contrast */
+  border: 1px solid #e0d6b9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  padding: 1rem;
+  text-align: center;
+  color: #111;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+/* Flyer image inside card */
+.flyer-img {
+  width: 100%;
+  max-width: 120px; /* or another value that fits your grid */
+  height: auto;
+  object-fit: cover;
+  margin: 0.5rem auto 1rem auto;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: block;
+}
+
+/* Make flyer image fit the card width */
+.flyer-card .flyer-img {
+  width: 100%;
+  height: 160px;    /* adjust this to the height you want */
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin: 0.5rem auto 1rem;
+}
+
+/* Ensure the flyer-card link doesn't look like a button */
+.flyer-card .modal-open {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Ensure the flyer-card link doesn't look like a button */
+/* (You already have this above) */
+/* .flyer-card .modal-open { display:block; text-decoration:none; color:inherit; } */
+
+/* =========================
+   Modal (CSS :target pattern)
+   ========================= */
+
+/* Lock background scroll when modal is open (modern browsers) */
+body:has(.modal:target) {
+  overflow: hidden;
+}
+
+/* Modal overlay */
+.modal {
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  inset: 0;              /* top:0; right:0; bottom:0; left:0 */
+  width: 100%;
+  height: 100%;
+  transition: all .5s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;  /* prevent interaction when hidden */
+}
+
+/* Visible state when targeted */
+.modal:target {
+  opacity: 1;
+  z-index: 1001;
+  pointer-events: auto;
+}
+
+/* Modal panel animation */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-width: 90vw;
+  background: #fff;
+  border-radius: 4px;
+  transform: translate(-50%, -200%);
+  transition: all .5s ease-in-out;
+  perspective: 1000;
+  outline: 1px solid transparent;
+  opacity: 0;
+}
+
+/* Animate in when targeted */
+.modal:target .modal-content {
+  transform: translate(-50%, -50%);
+  transition: all .5s ease-in-out;
+  transition-delay: .5s;
+  z-index: 9999;
+  opacity: 1;
+}
+
+/* Close (X) in the top-right of the modal panel */
+.modal-close {
+  float: right;
+  text-decoration: none;
+  padding: 22px 22px;
+  color: #424242;
+  font-weight: 800;
+  transition: all .5s ease-in-out;
+  background: rgba(0,0,0,0.1);
+  text-align: center;
+  border-radius: 0 4px 0 0;
+}
+.modal-close:hover {
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
+
+/* Modal header */
+.modal-content h3 {
+  padding: 20px;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+  text-transform: uppercase;
+  background: rgba(2,162,239,1); /* adjust to sepia theme if desired */
+  color: #fff;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Modal content area */
+.modal-area {
+  padding: 20px;
+}
+
+/* Tabs */
+.modal-area input[type="radio"] {
+  display: none;
+}
+.modal-area label {
+  float: left;
+  display: block;
+  padding: 10px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  background: rgba(0,0,0,.3);
+  color: #fff;
+  transition: all .5s ease-in-out;
+}
+.modal-area input[type="radio"]:checked + label {
+  background: #fff;
+  color: #424242;
+}
+
+/* Tab list and sliding panels */
+.tab-list {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  width: 100%;
+  overflow: hidden;
+  height: 150px;
+  position: relative;
+  clear: both; /* ensure labels above don't overlap */
+}
+.modal-tab {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  transform: translateX(-150%);
+  transition: all 300ms cubic-bezier(0, 0, .40, 1);
+  opacity: 0;
+  top: 0;
+  position: absolute;
+  height: 150px;
+  perspective: 1000;
+}
+
+/* Show active tab (supports both flyertab* or opentab* IDs) */
+#flyertab1:checked ~ .tab-list .tab1,
+#opentab1:checked ~ .tab-list .tab1 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#flyertab2:checked ~ .tab-list .tab2,
+#opentab2:checked ~ .tab-list .tab2 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+#flyertab3:checked ~ .tab-list .tab3,
+#opentab3:checked ~ .tab-list .tab3 {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+/* Responsive: keep modal usable on short viewports */
+@media (max-height: 500px) {
+  .modal-content {
+    max-height: 90vh;
+    overflow: auto;
+  }
+}
+.freeze-scroll {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+}
