@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tristin — web developer portfolio showing HTML, CSS, and JavaScript projects.">
   <title>Tristin - Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Tristin's Portfolio</h1>
-  <h2>About this portfolio</h2>
-  <div class="projects-grid">
+  <header>
+    <h1>Tristin's Portfolio</h1>
+  </header>
+
+  <main id="mainContent">
+    <h2>About this portfolio</h2>
+    <div class="projects-grid">
     <div class="summary-card">
       <p>
         This portfolio showcases my work in web development, including projects that demonstrate my skills in HTML, CSS, and JavaScript. Each project highlights a different aspect of my learning and creativity.
@@ -22,8 +27,10 @@
     <!-- Website column (tall card) -->
     <div class="website-stack">
       <div class="project-card tall-card">
-        <h4>Website</h4>
-        <p>Short description of website project.</p>
+        <a class="modal-open" href="#flyer-modal" data-project="website-usability">
+          <h4>Website</h4>
+          <p>Short description of website project.</p>
+        </a>
       </div>
     </div>
 
@@ -46,61 +53,57 @@
     <!-- Flyer column (stacked) -->
     <div class="vertical-stack">
       <div class="project-card flyer-card">
-        <a class="modal-open" href="#flyer-modal">
+  <a class="modal-open" href="#flyer-modal" data-project="eigonohi">
           <h4>Flyer</h4>
-          <img src="imgs/EIGONOHIfly.jpg" alt="Flyer preview image" class="flyer-img">
+          <img src="imgs/EIGONOHIfly.svg" alt="Flyer preview image" class="flyer-img">
           <p>Short description.</p>
         </a>
       </div>
       <div class="project-card">
-        <h4>Brochure</h4>
-        <p>Content for extra grid 1.</p>
+        <a class="modal-open" href="#flyer-modal" data-project="brochure">
+          <h4>Brochure</h4>
+          <p>Content for extra grid 1.</p>
+        </a>
       </div>
       <div class="project-card">
-        <h4>Poster</h4>
-        <p>Content for extra grid 2.</p>
+        <a class="modal-open" href="#flyer-modal" data-project="poster">
+          <h4>Poster</h4>
+          <p>Content for extra grid 2.</p>
+        </a>
       </div>
     </div>
   </div>
 
-  <h4>Contact me!</h4>
+  </main>
+
+  <footer>
+    <h4>Contact me!</h4>
+  </footer>
 
   <!-- Tabbed Modal for Flyer (CSS :target) -->
   <div class="modal" id="flyer-modal" role="dialog" aria-modal="true" aria-labelledby="flyerModalTitle">
-    <div class="modal-content">
+    <div class="modal-content" tabindex="-1">
       <a href="#" class="modal-close" id="modalClose" title="Close Modal" aria-label="Close modal">X</a>
       <h3 id="flyerModalTitle">Flyer Project Details</h3>
-      <div class="modal-area">
-        <p style="margin-bottom: 1rem;">Tabbed Modal content area (fixed height for transitions).</p>
+      <div class="modal-area pdf-modal-grid">
+        <!-- Left: list of PDFs (populated from manifest) -->
+        <div class="pdf-list" id="pdfList" role="listbox" aria-label="List of PDFs">
+          <!-- Items will be injected here by script.js -->
+        </div>
 
-        <!-- Tabs -->
-        <input id="flyertab1" type="radio" name="flyermodaltabs" checked="checked"/>
-        <label for="flyertab1">Design</label>
-
-        <ul class="tab-list">
-          <li class="modal-tab tab1">
-            <p>Design content for the flyer goes here.</p>
-            <a href="imgs/EIGONOHI_flyer.pdf" download target="_blank" class="pdf-download">
-              Download Flyer PDF
-            </a>
-          </li>
-        </ul>
+        <!-- Right: viewer area (lazy-load iframe) -->
+        <div class="pdf-viewer" id="pdfViewerArea">
+          <div id="viewerPlaceholder" class="viewer-placeholder">Select a document to preview</div>
+          <iframe id="pdfViewer" title="PDF preview" src="" frameborder="0" aria-hidden="true" style="display:none;"></iframe>
+          <div class="viewer-actions">
+            <a id="pdfDownload" class="pdf-download" href="#" download target="_blank" rel="noopener noreferrer">Download PDF</a>
+            <a id="pdfOpenNew" class="pdf-open-new" href="#" target="_blank" rel="noopener noreferrer">Open in new tab</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
-  <script>
-    // Freeze scroll when modal is open
-    function checkModal() {
-      if (window.location.hash === "#flyer-modal") {
-        document.body.classList.add("freeze-scroll");
-      } else {
-        document.body.classList.remove("freeze-scroll");
-      }
-    }
-    window.addEventListener("hashchange", checkModal);
-    window.addEventListener("DOMContentLoaded", checkModal);
-  </script>
 </body>
 </html>

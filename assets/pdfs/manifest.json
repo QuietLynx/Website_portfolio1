@@ -1,0 +1,160 @@
+[
+  {
+    "projectId": "eigonohi",
+    "title": "EIGONOHI",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+    "docs": [
+      {
+        "id": "eigonohi-flyer-assessment",
+        "title": "Flyer — Assessment",
+        "filename": "assets/pdfs/eigonohi/eigonohi-flyer-assessment.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Assessment of the flyer designs."
+      },
+      {
+        "id": "eigonohi-flyer-revised",
+        "title": "Flyer — Revised Draft",
+        "filename": "assets/pdfs/eigonohi/eigonohi-flyer-revised-draft.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Revised draft of the flyer."
+      },
+      {
+        "id": "eigonohi-flyer-sketches",
+        "title": "Flyer — Sketches",
+        "filename": "assets/pdfs/eigonohi/eigonohi-flyer-sketches.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Initial sketches for flyer composition."
+      },
+      {
+        "id": "eigonohi-peer-comments",
+        "title": "Peer Editing Comments",
+        "filename": "assets/pdfs/eigonohi/eigonohi-peer-editing-comments.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Peer feedback on flyer and advertisement."
+      }
+    ]
+  },
+  {
+    "projectId": "website-usability",
+    "title": "Website — Usability",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+    "docs": [
+      {
+        "id": "website-usability-test-1",
+        "title": "Usability Test 1",
+        "filename": "assets/pdfs/website-usability/website-usability-test-1.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "First round usability test results."
+      },
+      {
+        "id": "website-usability-testing",
+        "title": "Usability Testing",
+        "filename": "assets/pdfs/website-usability/website-usability-testing.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Usability testing summary."
+      },
+      {
+        "id": "website-sketches",
+        "title": "Website Sketches",
+        "filename": "assets/pdfs/website-usability/website-sketches.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Design sketches for the website."
+      },
+      {
+        "id": "website-planning-memo",
+        "title": "Planning Memo",
+        "filename": "assets/pdfs/website-usability/website-planning-memo.pdf",
+        "thumbnail": "",
+        "description": "Planning memo for website project."
+      }
+    ]
+  },
+  {
+    "projectId": "resume",
+    "title": "Resume",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+    "docs": [
+      {
+        "id": "resume-draft",
+        "title": "Resume — Draft",
+        "filename": "assets/pdfs/resume/resume-draft.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Draft version of resume."
+      },
+      {
+        "id": "resume-assessment",
+        "title": "Resume — Assessment",
+        "filename": "assets/pdfs/resume/resume-assessment.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Assessment notes for resume."
+      },
+      {
+        "id": "resume-final",
+        "title": "Resume — Final",
+        "filename": "assets/pdfs/resume/resume-final.pdf",
+        "thumbnail": "",
+        "description": "Final resume PDF."
+      }
+    ]
+  },
+  {
+    "projectId": "business-card",
+    "title": "Business Card",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+    "docs": [
+      {
+        "id": "business-card-planning-sketches",
+        "title": "Business Card — Planning Sketches",
+        "filename": "assets/pdfs/business-card/business-card-planning-sketches-20250826.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Planning sketches dated 2025-08-26."
+      },
+      {
+        "id": "business-card-planning-memo",
+        "title": "Business Card — Planning Memo",
+        "filename": "assets/pdfs/business-card/business-card-planning-memo-tristin.pdf",
+  "thumbnail": "imgs/thumb-placeholder.svg",
+  "thumbnail2x": "imgs/thumb-placeholder.svg",
+        "description": "Planning memo for the business card."
+      },
+      {
+        "id": "business-card-peer-editing",
+        "title": "Business Card — Peer Editing Draft",
+        "filename": "assets/pdfs/business-card/business-card-peer-editing-draft.pdf",
+        "thumbnail": "",
+        "description": "Peer editing draft for business card."
+      }
+    ]
+  },
+  {
+    "projectId": "letterhead",
+    "title": "Letterhead",
+    "thumbnail": "",
+    "docs": [
+      {
+        "id": "letterhead-peer-editing",
+        "title": "Letterhead — Peer Editing Draft",
+        "filename": "assets/pdfs/letterhead/letterhead-peer-editing-draft.pdf",
+        "thumbnail": "",
+        "description": "Peer editing draft for letterhead."
+      },
+      {
+        "id": "letterhead-assessment",
+        "title": "Letterhead — Assessment",
+        "filename": "assets/pdfs/letterhead/letterhead-assessment.pdf",
+        "thumbnail": "",
+        "description": "Assessment notes for letterhead."
+      }
+    ]
+  }
+]
