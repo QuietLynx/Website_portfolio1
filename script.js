@@ -1,7 +1,7 @@
 // Modal focus & hash management for :target modal pattern
 document.addEventListener('DOMContentLoaded', function() {
   const MAIN_CONTENT_ID = 'mainContent';
-  const MODAL_ID = 'flyer-modal';
+  const MODAL_ID = 'portfolio-modal';
   const modal = document.getElementById(MODAL_ID);
   const modalPanel = modal ? modal.querySelector('.modal-content') : null;
   const closeLink = modal ? modal.querySelector('.modal-close') : null;
